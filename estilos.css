@@ -1385,4 +1385,89 @@ p {
     margin-right: 10px;
 }
 
+/* =========================
+   RESPONSIVIDADE MOBILE
+   ========================= */
+@media (max-width: 768px) {
 
+    /* Espaçamento geral */
+    section, .secao {
+        padding: 60px 24px !important;
+        text-align: center;
+    }
+
+    /* Ajuste do título principal */
+    h1, .hero-title {
+        font-size: 34px !important;
+        line-height: 1.25 !important;
+    }
+
+    h2 {
+        font-size: 28px !important;
+    }
+
+    p, .hero-sub, #ebook p, .sobre-conteudo p {
+        font-size: 17px !important;
+        line-height: 1.55 !important;
+    }
+
+    /* SEÇÃO EBOOK - Capa centralizada */
+    .ebook-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .ebook-capa {
+        transform: none !important;
+        justify-content: center !important;
+        width: 100% !important;
+        text-align: center;
+    }
+
+    .ebook-capa img {
+        width: 70% !important;
+        max-width: 320px !important;
+        margin: auto;
+    }
+
+    /* Botões */
+    .botao, .botao-principal, .botao-secundario, .botao-ebook, .cta-reforco {
+        width: 100% !important;
+        text-align: center !important;
+        padding: 14px 0 !important;
+        font-size: 18px !important;
+    }
+
+    /* SOBRE (imagem em cima, texto embaixo) */
+    .sobre {
+        flex-direction: column !important;
+        padding: 80px 24px !important;
+        text-align: center !important;
+    }
+
+    .sobre-img img {
+        width: 85% !important;
+        max-width: 330px !important;
+    }
+
+    /* Grid de benefícios / porque / planos */
+    .porque-grid, .benef-grid, .planos-grid, .cf-grid {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+    }
+
+    .cf-passos {
+        width: 100% !important;
+    }
+
+    /* Depoimentos - mostrar apenas carrossel rolável */
+    .depo-carousel {
+        overflow-x: scroll !important;
+        padding-bottom: 10px;
+    }
+
+    /* Transformações */
+    #transformacoes {
+        padding: 60px 0 !important;
+    }
+}
