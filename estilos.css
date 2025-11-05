@@ -1385,89 +1385,116 @@ p {
     margin-right: 10px;
 }
 
-/* =========================
-   RESPONSIVIDADE MOBILE
-   ========================= */
+/* ===================== */
+/*  RESPONSIVIDADE MOBILE */
+/* ===================== */
+
 @media (max-width: 768px) {
 
-    /* Espaçamento geral */
-    section, .secao {
-        padding: 60px 24px !important;
-        text-align: center;
+    body {
+        padding: 0;
+        overflow-x: hidden;
     }
 
-    /* Ajuste do título principal */
-    h1, .hero-title {
-        font-size: 34px !important;
-        line-height: 1.25 !important;
+    header nav {
+        display: none; /* Menu continua igual, apenas esconde pra não quebrar */
     }
 
-    h2 {
-        font-size: 28px !important;
+    .logo {
+        font-size: 1.3rem;
     }
 
-    p, .hero-sub, #ebook p, .sobre-conteudo p {
-        font-size: 17px !important;
-        line-height: 1.55 !important;
-    }
-
-    /* SEÇÃO EBOOK - Capa centralizada */
+    /* EBOOK */
     .ebook-container {
         flex-direction: column;
         text-align: center;
+        padding: 20px;
     }
 
-    .ebook-capa {
-        transform: none !important;
-        justify-content: center !important;
-        width: 100% !important;
-        text-align: center;
+    .ebook-texto h1 {
+        font-size: 1.9rem;
+        line-height: 2.3rem;
+    }
+
+    .ebook-texto p {
+        font-size: 1rem;
     }
 
     .ebook-capa img {
-        width: 70% !important;
-        max-width: 320px !important;
-        margin: auto;
+        width: 70%;
+        margin: 20px auto 0;
+        display: block;
     }
 
-    /* Botões */
-    .botao, .botao-principal, .botao-secundario, .botao-ebook, .cta-reforco {
-        width: 100% !important;
-        text-align: center !important;
-        padding: 14px 0 !important;
-        font-size: 18px !important;
+    /* HERO */
+    .hero-title {
+        font-size: 1.8rem;
+        text-align: center;
     }
 
-    /* SOBRE (imagem em cima, texto embaixo) */
+    .hero-sub {
+        font-size: 1rem;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* SOBRE */
     .sobre {
-        flex-direction: column !important;
-        padding: 80px 24px !important;
-        text-align: center !important;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
     }
 
     .sobre-img img {
-        width: 85% !important;
-        max-width: 330px !important;
+        width: 75%;
+        margin: 0 auto;
     }
 
-    /* Grid de benefícios / porque / planos */
-    .porque-grid, .benef-grid, .planos-grid, .cf-grid {
-        grid-template-columns: 1fr !important;
-        gap: 24px !important;
+    /* BENEFÍCIOS / PORQUE GRID */
+    .porque-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
     }
 
-    .cf-passos {
-        width: 100% !important;
+    /* COMO FUNCIONA */
+    .cf-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
     }
 
-    /* Depoimentos - mostrar apenas carrossel rolável */
+    /* PLANOS */
+    .planos-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    /* DEPOIMENTOS */
     .depo-carousel {
-        overflow-x: scroll !important;
-        padding-bottom: 10px;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
     }
 
-    /* Transformações */
-    #transformacoes {
-        padding: 60px 0 !important;
+    /* FAQ */
+    .faq-item h3 {
+        font-size: 1.1rem;
+    }
+
+    /* FOOTER */
+    .footer-container {
+        text-align: center;
+        flex-direction: column;
+        gap: 15px;
     }
 }
+
