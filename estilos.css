@@ -1389,15 +1389,30 @@ p {
 /*  RESPONSIVIDADE MOBILE */
 /* ===================== */
 
+/* ===================== */
+/*  RESPONSIVIDADE MOBILE */
+/* ===================== */
+
 @media (max-width: 768px) {
-    /* Esconde o menu do desktop, mas não mexe no mobile */
-    header nav#menu-mobile {
+
+    /* Esconde menu desktop */
+    header nav {
         display: none;
     }
 
+    /* Mostra botão hambúrguer */
+    .menu-hamburger {
+        display: block;
+        font-size: 32px;
+        color: #00ff8f;
+        cursor: pointer;
+    }
+
+    /* Layout geral */
     body {
         padding: 0;
         overflow-x: hidden;
+    }
 
     .logo {
         font-size: 1.3rem;
@@ -1419,27 +1434,30 @@ p {
         font-size: 1rem;
     }
 
+    .ebook-capa {
+        transform: none;
+        margin: 0 auto;
+    }
+
     .ebook-capa img {
-        width: 70%;
-        margin: 20px auto 0;
+        width: 80%;
         display: block;
+        margin: 20px auto;
     }
 
     /* HERO */
     .hero-title {
-        font-size: 1.8rem;
-        text-align: center;
+        font-size: 2rem;
     }
 
     .hero-sub {
         font-size: 1rem;
-        text-align: center;
         padding: 0 10px;
     }
 
     .hero-buttons {
         flex-direction: column;
-        gap: 10px;
+        gap: 12px;
     }
 
     /* SOBRE */
@@ -1450,49 +1468,36 @@ p {
     }
 
     .sobre-img img {
-        width: 75%;
-        margin: 0 auto;
+        max-width: 85%;
+        margin: auto;
     }
 
-    /* BENEFÍCIOS / PORQUE GRID */
+    /* GRID BENEFÍCIOS e PORQUE */
     .porque-grid {
-        display: flex;
         flex-direction: column;
-        gap: 15px;
+        display: flex;
+        gap: 18px;
     }
 
-        .cf-grid {
-        display: flex;
+    /* COMO FUNCIONA */
+    .cf-grid {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
+        display: flex;
         gap: 35px;
-        margin: 0 auto;
-        width: 100%;
+        text-align: center;
+        align-items: center;
     }
 
     .cf-passos {
         width: 100%;
     }
 
-    .cf-icon {
-        margin: 0 auto 15px;
-    }
-}
-    /* COMO FUNCIONA */
-    .cf-grid {
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-        text-align: center;
-    }
-
     /* PLANOS */
     .planos-grid {
-        display: flex;
         flex-direction: column;
-        gap: 20px;
+        display: flex;
         padding: 0 20px;
+        gap: 20px;
     }
 
     /* DEPOIMENTOS */
@@ -1509,125 +1514,22 @@ p {
 
     /* FOOTER */
     .footer-container {
-        text-align: center;
         flex-direction: column;
+        text-align: center;
         gap: 15px;
     }
 }
 
-@media (max-width: 768px) {
-
-    /* Espaço para não ficar colado no topo */
-    .topo {
-        padding: 14px 20px;
-    }
-
-    /* Ajusta o container do ebook */
-    #ebook {
-        padding: 60px 20px;
-    }
-
-    .ebook-texto h1 {
-        font-size: 1.9rem;
-        line-height: 2.3rem;
-    }
-
-    .ebook-texto p {
-        font-size: 1rem;
-    }
-
-    .ebook-capa img {
-        width: 80%;
-        transform: none !important;
-        margin: 20px auto 0;
-        display: block;
-    }
-
-    /* Hero */
-    .hero {
-        padding: 120px 20px 60px;
-    }
-
-    .hero-title {
-        font-size: 2rem;
-    }
-
-    .hero-sub {
-        font-size: 1rem;
-        padding: 0 10px;
-    }
-
-    /* Seção Sobre */
-    .sobre {
-        flex-direction: column;
-        padding: 60px 20px;
-        gap: 40px;
-    }
-
-    .sobre-img img {
-        max-width: 85%;
-        margin: auto;
-    }
-
-    .sobre-conteudo p {
-        font-size: 1rem;
-        line-height: 1.6;
-    }
-
-    /* Planos */
-    .planos-grid {
-        display: flex;
-        flex-direction: column;
-        padding: 0 20px;
-        gap: 20px;
-    }
-
-    /* Depoimentos */
-    .depo-wrapper {
-        width: 100%;
-        overflow-x: auto;
-    }
-
-    .depo-carousel {
-        display: flex;
-        gap: 16px;
-        padding: 0 10px;
-        scroll-snap-type: x mandatory;
-        overflow-x: auto;
-        width: 100%;
-    }
-
-    .depo-card {
-        min-width: 280px;
-        scroll-snap-align: center;
-    }
-}
-
-/* MENU MOBILE */
-.menu-hamburger {
+/* MENU MOBILE (desliza da direita) */
+#menu-mobile {
     display: none;
-    font-size: 32px;
-    color: #00ff8f;
-    cursor: pointer;
-    user-select: none;
 }
 
 #menu-mobile.ativo {
     display: flex !important;
 }
 
-/* Oculta menu no mobile até abrir */
-#menu-mobile {
-    display: flex;
-}
-
-/* Ativa no mobile */
 @media (max-width: 768px) {
-
-    .menu-hamburger {
-        display: block;
-    }
-
     #menu-mobile {
         position: fixed;
         top: 70px;
@@ -1637,27 +1539,19 @@ p {
         background: #000000f0;
         backdrop-filter: blur(10px);
         border-left: 1px solid #00ff8f33;
-        display: none;
         flex-direction: column;
         padding: 30px 25px;
         gap: 20px;
         z-index: 99999;
-        animation: slideMenu 0.35s ease forwards;
+        animation: slideMenu .35s ease forwards;
     }
 
     #menu-mobile a {
         font-size: 1.2rem;
         color: #fff;
-        text-align: left;
         text-decoration: none;
-        padding: 8px 0;
         border-bottom: 1px solid #00ff8f22;
-        transition: 0.3s;
-    }
-
-    #menu-mobile a:hover {
-        color: #00ff8f;
-        text-shadow: 0 0 8px #00ff8fbb;
+        padding-bottom: 8px;
     }
 
     @keyframes slideMenu {
@@ -1665,4 +1559,3 @@ p {
         to { transform: translateX(0); }
     }
 }
-
