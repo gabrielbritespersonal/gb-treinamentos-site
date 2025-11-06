@@ -1390,15 +1390,14 @@ p {
 /* ===================== */
 
 @media (max-width: 768px) {
+    /* Esconde o menu do desktop, mas não mexe no mobile */
+    header nav#menu-mobile {
+        display: none;
+    }
 
     body {
         padding: 0;
         overflow-x: hidden;
-    }
-
-    header nav {
-        display: none; /* Menu continua igual, apenas esconde pra não quebrar */
-    }
 
     .logo {
         font-size: 1.3rem;
@@ -1462,6 +1461,24 @@ p {
         gap: 15px;
     }
 
+        .cf-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 35px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .cf-passos {
+        width: 100%;
+    }
+
+    .cf-icon {
+        margin: 0 auto 15px;
+    }
+}
     /* COMO FUNCIONA */
     .cf-grid {
         display: flex;
@@ -1595,6 +1612,10 @@ p {
     user-select: none;
 }
 
+#menu-mobile.ativo {
+    display: flex !important;
+}
+
 /* Oculta menu no mobile até abrir */
 #menu-mobile {
     display: flex;
@@ -1644,3 +1665,4 @@ p {
         to { transform: translateX(0); }
     }
 }
+
