@@ -143,10 +143,10 @@ btnTransformacoes.addEventListener("click", () => {
 
 });
 
-// MENU HAMBURGER
 const menuBtn = document.getElementById("menu-btn");
 const menuMobile = document.getElementById("menu-mobile");
 
 menuBtn.addEventListener("click", () => {
-    menuMobile.style.display = menuMobile.style.display === "flex" ? "none" : "flex";
+    menuMobile.classList.toggle("ativo");
 });
+
