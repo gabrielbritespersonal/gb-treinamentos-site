@@ -150,3 +150,6 @@ menuBtn.addEventListener("click", () => {
     menuMobile.classList.toggle("ativo");
 });
 
+document.getElementById("menu-btn").onclick = function() {
+    document.getElementById("menu-mobile").classList.toggle("ativo");
+}
