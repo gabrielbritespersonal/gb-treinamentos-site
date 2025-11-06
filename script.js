@@ -149,8 +149,3 @@ const menuMobile = document.getElementById("menu-mobile");
 menuBtn.addEventListener("click", () => {
     menuMobile.classList.toggle("ativo");
 });
-
-const menuBtn = document.getElementById("menu-btn").onclick = function() {
-const menuMobile = document.getElementById("menu-mobile").classList.toggle("ativo");
-}
-
