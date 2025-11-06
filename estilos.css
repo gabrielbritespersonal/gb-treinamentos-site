@@ -1497,9 +1497,3 @@ p {
         gap: 15px;
     }
 }
-
-@media (max-width: 768px) {
-    body {
-        background: red !important;
-    }
-}
