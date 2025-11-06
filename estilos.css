@@ -1400,13 +1400,21 @@ p {
         display: none;
     }
 
-    /* Mostra botão hambúrguer */
+    /* Desktop = escondido */
+.menu-hamburger {
+    display: none;
+}
+
+/* Mobile = aparece */
+@media (max-width: 768px) {
     .menu-hamburger {
         display: block;
-        font-size: 32px;
-        color: #00ff8f;
-        cursor: pointer;
     }
+
+    header nav:not(#menu-mobile) {
+        display: none;
+    }
+}
 
     /* Layout geral */
     body {
@@ -1559,3 +1567,4 @@ p {
         to { transform: translateX(0); }
     }
 }
+
